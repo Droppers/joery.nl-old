@@ -1,0 +1,22 @@
+.card.portfolio-item {
+	.info {
+    	padding: 0 24px;
+
+		>.title { font-size: 25px; }
+	}
+
+	>.content {
+		>.title {
+			font-size: 27px;
+		}
+		
+		.meta {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.card.project-view > .banner-heading {
+	height: auto;
+	padding-top: 50%;
+}

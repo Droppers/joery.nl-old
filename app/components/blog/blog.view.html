@@ -1,0 +1,61 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+			<error-card ng-if="vm.posts.length == 0" icon="info" message="'no_search_results' | translate"></error-card>
+
+			<div class="card post-list" ng-repeat="post in vm.posts">
+				<div class="banner-heading medium shade">
+					<div class="banner" ng-style="{'background-image':'url(' + post.bannerImage + ')'}"></div>
+					<!--
+					<a class="category" ui-sref="main.blog.search({filter: 'category', search: post.Category.slug})">
+						{{post.PostCategory.name | translate}}
+					</a>-->
+					
+					<div class="info">
+						<div class="title">
+							{{post.title}}
+						</div>
+						<!--<div class="meta">
+							<div class="left">
+								<i class="mdi mdi-account"></i> {{post.Author.mail}}
+							</div>
+							<div class="right">
+								<i class="mdi mdi-clock"></i> <time datetime="{{post.publishedAt}}" time-ago></time>
+							</div>
+						</div>-->
+					</div>
+				</div>
+				<div class="content">
+					<div class="meta">
+						<div class="item">
+							<i class="mdi mdi-clock"></i> 
+							<time datetime="{{post.publishedAt | date:'yyyy-MM-ddThh:mm'}}" time-ago itemprop="datePublished"></time>
+						</div>
+						<div class="item right">
+							<i class="mdi mdi-tag"></i> 
+							<a ui-sref="main.blog.search({filter: 'category', search: post.PostCategory.slug})">
+								{{post.PostCategory.name | translate}}
+							</a>
+						</div>
+					</div>
+					<div class="body"><!-- magic markdown -->
+						Hier komt dan een korte beschrijving van de blog, dit komt op pagina waar lijst van blog posts staan!
+					</div>
+					<div class="footer">
+						<ul class="chip-list no-margin">
+							<li ng-repeat="tag in post.Tags">
+								<div class="inner">
+									<a ui-sref="main.blog.search({filter: 'tag', search: tag.slug})">{{tag.name}}</a>
+								</div>
+							</li>
+						</ul>
+						
+						<a class="button primary raised right" ui-sref="main.blog.post({category: post.PostCategory.slug, title: post.slug})">{{'read_more' | translate}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div ng-include="'components/blog/blog-aside.view.html'"></div>
+	</div>
+</div>

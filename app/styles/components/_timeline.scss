@@ -1,0 +1,97 @@
+.timeline {
+	position: relative;
+	display: inline-block;
+	&:not(.child) {
+		margin-bottom: 24px;
+	}
+
+	>li {
+		width: 100%;
+
+		&:first-child { margin-top: 0; }
+
+		>.item {
+			width: 100%;
+			display: table;
+			table-layout: fixed;
+
+			>.date {
+				width: 25%;
+				text-align: right;
+				padding: 26px 42px 0 0;
+				margin-right: 42px;
+				display: table-cell;
+				vertical-align: top;
+			}
+
+			>.content {
+				width: 100%;
+				display: table-cell;
+				vertical-align: top;
+				padding: 0px 0 0px 48px;
+				position: relative;
+
+				&:before {
+				    content: "";
+				    background: $primary-color;
+				    position: absolute;
+				    left: -2px;
+				    bottom: 0;
+				    top: 0px;
+				    width: 4px;
+				}
+
+				&:after {
+				    content: "\F474";
+				    background: $primary-color;
+				    border-radius: 50%;
+				    color: #FFF;
+				    font-size: 27px;
+				    box-shadow: 0 0 0 2px #F2F2F2;
+				    font: normal normal normal 24px/1 "Material Design Icons";
+				    padding: 13px;
+				    position: absolute;
+				    left: 0;
+				    transform: translateX(-50%);
+				    top: 9px;
+				}
+			}
+		}
+	}
+
+	&.child > li > .item {
+		>.content {
+			padding: 0px 0px 24px 64px;
+
+			>.title {
+				font-size: 20px;
+			}
+
+			>.body {
+			    width: 100%;
+			    color: #212121;
+			}
+
+			&:after {
+			    background: #F2F2F2;
+			    color: $primary-color;
+			    font-size: 23px;
+			    box-shadow: 0 0 0 2px $primary-color;
+			    padding: 8px;
+			    top: 14px;
+			}
+		}
+	}
+
+	&:not(.child) > li:first-child > .item > .content::before {
+		top: 18px;
+	}
+
+	@media (max-width: $screen-lg) {
+		&:not(.child) { margin-left: 28px; }
+
+		>li > .item > .date {
+			display: none;
+		}
+	}
+}

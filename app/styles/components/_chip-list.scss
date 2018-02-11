@@ -1,0 +1,56 @@
+.chip-list {
+	margin: 8px 8px 8px 8px;
+	overflow: auto;
+	display: inline-block;
+
+	&.no-margin {
+		margin: 0;
+		margin-left: -4px;
+	}
+
+	>li {
+	    float: left;
+	    display: inline-block;
+	    border-radius: 5px;
+	    background: rgba(0,0,0,.07);
+	    margin: 4px;
+	    font-size: 14px;
+		transition: 400ms;
+	    background: linear-gradient(157deg,#3f51b5,#873fb5);
+
+		a {
+		    padding: 7px 12px;
+			color: rgba(0,0,0,.95);
+			font-weight: 500;
+		    transition: 200ms;
+		    display: inline-block;
+		    cursor: pointer;
+		}
+
+		/*&:hover { background: rgba(0,0,0,.16); }*/
+		&:hover a {
+			color: #FFF;
+			font-weight: 500;
+		}
+
+		.inner {
+			margin: 2px;
+			background: #FFF;
+			border-radius: 4px;
+
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.chip-list.light > li {
+	background: rgba(255, 255, 255, 0.11);
+
+	>a { color: rgba(255, 255, 255, .8); }
+
+	&:hover { background: rgba(255, 255, 255, 0.2); }
+
+	&:hover > a { color: #FFF; }
+}

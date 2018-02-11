@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html ng-app="blogApp" lang="nl" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="blogApp" lang="nl" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="blogApp" lang="nl" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="blogApp" lang="nl" dir="ltr" class="no-js"> <!--<![endif]-->
+    <head>
+	    <meta charset="utf-8">
+		<base href="/">
+
+		<meta name="prerender-status-code" content="{{Meta.statusCode}}">
+		
+		<!-- Prefetch DNS -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		
+        <title ng-bind="Meta.title">Joery Droppers</title>
+
+        <!-- Dynamic meta tags, used in Angular for search engines -->
+        <meta ng-repeat="(name, content) in Meta.tags" name="{{name}}" content="{{content}}">
+
+        <!-- Pre-defined meta tags, for Facebook, Twitter bots etc. who don't execute JavaScript -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta http-equiv="cleartype" content="on">
+
+		<meta property="og:image" content="https://joery.nl/assets/images/logos/og-image.png">
+		<meta property="og:image:url" content="https://joery.nl/assets/images/logos/og-image.png">
+		<meta property="og:image:secure_url" content="https://joery.nl/assets/images/logos/og-image.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="256">
+		<meta property="og:image:height" content="256">
+		<meta property="og:title" content="Joery Droppers">
+		<meta property="og:site_name" content="Joery Droppers">
+		<meta property="og:description" content="Ik ben een full-stack developer en werk onder andere in JavaScript, PHP, Python en C#.">
+		<meta property="og:url" content="https://{{Meta.host}}/">
+		<meta property="og:type" content="website">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@JoeryDroppers">
+		<meta name="twitter:site:id" content="240699211">
+		<meta name="twitter:creator" content="@JoeryDroppers">
+		<meta name="twitter:url" content="https://{{Meta.host}}/">
+		<meta name="twitter:creator:id" content="240699211">
+		<meta name="twitter:title" content="Joery's Portfolio">
+		<meta name="twitter:description" content="Blog en portfolio van Joery Droppers.">
+
+  		<meta name="HandheldFriendly" content="true">
+  		<meta name="MobileOptimized" content="width">
+
+  		<link rel="shortcut icon" href="./assets/images/logos/favicon-new.png">
+
+  		<link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
+  		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+		<!-- bower:css -->
+		<!-- endinject -->
+		<!-- inject:css -->
+		<!-- endinject -->
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Person",
+				"name": "Joery Droppers",
+				"telephone": "+31 6 18158333",
+				"email": "joery@droppe.rs",
+				"image": "https://joery.me/assets/images/logos/favicon.png",
+				"birthDate": "1999.02.26",
+				"nationality": "Netherlands",
+				"gender": "male",
+				"url": "https://joery.me",
+				"sameAs" : [ "http://www.facebook.com/joery.droppers",
+				"http://www.twitter.com/JoeryDroppers",
+				"https://plus.google.com/100185071047643104582",
+				"https://github.com/JoeryDroppers"]
+		  	}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"url": "https://joery.me",
+				"name": "Joery Droppers",
+				"alternateName": "Mijn persoonlijke blog en portfolio.",
+				"author": {
+					"@type": "Person",
+					"name": "Joery Droppers"
+				},
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://joery.me/blog/search/{search_term}",
+					"query-input": "required name=search_term"
+				}
+			}
+		</script>
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		</script>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage">
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<div ui-view></div>
+
+		<!-- bower:js -->
+		<!-- endinject -->
+		<!-- inject:js -->
+		<!-- endinject -->
+
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+	</body>
+</html>

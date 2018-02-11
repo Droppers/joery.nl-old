@@ -1,0 +1,25 @@
+<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4" ng-controller="PortfolioAsideCtrl as aside">
+	<div class="card">
+		<div class="title">
+			Project type
+		</div>
+		<div class="content no-padding">
+			<ul class="link-list">
+				<li ng-repeat="category in aside.topCategories" ng-class="{selected: aside.categorySlug == category.slug || vm.categorySlug == category.slug}">
+					<a ui-sref="main.portfolio.search({filter: 'category', search: category.slug})">
+						{{category.name | translate}}
+						<span class="count right">{{category.count}}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="card">
+		<div class="title">
+			Informatie over pagina
+		</div>
+		<div class="content">
+			In de toekomst komt hier informatie over deze pagina!
+		</div>
+	</div>
+</div>

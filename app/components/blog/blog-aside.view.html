@@ -1,0 +1,38 @@
+<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4" ng-controller="BlogAsideCtrl as aside">
+	<div class="search-card">
+		<div class="icon">
+			<i class="mdi mdi-magnify"></i>
+		</div>
+		<input type="text" required ng-keyup="$event.keyCode == 13 && aside.doSearch($event)" value="{{aside.filter == 'search' ? aside.search : undefined}}">
+		<label>{{'blog.search_posts' | translate}}</label>
+	</div>
+	<div class="card">
+		<div class="title">
+			{{'blog.categories' | translate}}
+		</div>
+		<div class="content no-padding">
+			<ul class="link-list">
+				<li ng-repeat="category in aside.topCategories" ng-class="{selected: aside.categorySlug == category.slug || vm.categorySlug == category.slug}">
+					<a ui-sref="main.blog.search({filter: 'category', search: category.slug})">
+						{{category.name | translate}}
+						<span class="count right">{{category.count}}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="card">
+		<div class="title">
+			{{'blog.tags' | translate}}
+		</div>
+		<div class="content small-padding">
+			<ul class="chip-list">
+				<li ng-repeat="tag in aside.topTags">
+					<div class="inner">
+						<a ui-sref="main.blog.search({filter: 'tag', search: '{{tag.slug}}'})">{{tag.name}}</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

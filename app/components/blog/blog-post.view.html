@@ -1,0 +1,66 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+			<article class="card" itemscope itemtype="http://schema.org/BlogPosting">
+				<!--<div class="banner-heading medium shade">
+					<div class="banner" ng-style="{'background-image':'url(' + vm.post.bannerImage + ')'}"></div>
+					
+					<a class="category" ui-sref="main.blog.search({filter: 'category', search: vm.post.Category.slug})">
+						{{vm.post.PostCategory.name | translate}}
+					</a>
+					
+					<div class="info">
+						<h1 class="title" itemprop="name headline">
+							{{vm.post.title}}
+						</h1>
+						<div class="meta">
+							<div class="left" itemtype="http://schema.org/Person">
+								<i class="mdi mdi-account"></i> <span itemprop="name">{{vm.post.Author.mail}}</span>
+							</div>
+							<div class="right">
+								<i class="mdi mdi-clock"></i> <time datetime="{{vm.post.publishedAt | date:'yyyy-MM-ddThh:mm'}}" time-ago itemprop="datePublished"></time>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<div class="content extra-padding">
+					<!--
+					<div class="title">
+						{{vm.post.title}}
+					</div>-->
+
+					<div class="meta">
+						<div class="item">
+							<i class="mdi mdi-clock"></i> 
+							<time datetime="{{vm.post.publishedAt | date:'yyyy-MM-ddThh:mm'}}" time-ago itemprop="datePublished"></time>
+						</div>
+						<div class="item right">
+							<i class="mdi mdi-tag"></i> 
+							<a ui-sref="main.blog.search({filter: 'category', search: vm.post.PostCategory.slug})">
+								{{vm.post.PostCategory.name | translate}}
+							</a>
+						</div>
+					</div>
+
+					<div class="title">
+						{{vm.post.title}}
+					</div>
+
+					<div class="body" itemprop="articleBody" marked="vm.post.body">
+					</div>
+					<div class="footer" ng-hide="!vm.post.Tags.length">
+						<ul class="chip-list no-margin">
+							<li ng-repeat="tag in vm.post.Tags">
+								<div class="inner">
+									<a ui-sref="main.blog.search({filter: 'tag', search: tag.slug})">{{tag.name}}</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		
+		<div ng-include="'components/blog/blog-aside.view.html'"></div>
+	</div>
+</div>

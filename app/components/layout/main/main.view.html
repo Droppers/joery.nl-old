@@ -1,0 +1,202 @@
+<main role="main" itemscope itemprop="mainContentOfPage">
+	<header ng-controller="HeaderCtrl as header" class="main-header" ng-class="{ 'transparent':  $state.includes('main.home') }" scroll-class="scrolled" itemscope itemtype="http://schema.org/WPHeader">
+		<div class="nav">
+			<div class="container">
+				<div class="nav-toggle" ng-click="header.toggleNavigation()">
+					<i class="mdi mdi-menu"></i>
+				</div>
+				<div class="logo">
+					<a href="/">
+						<img class="white" src="./assets/images/logos/logo-hexagon.svg">
+					</a>
+				</div>
+				<nav class="main-nav" aria-expanded="false" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<ul> 
+						<li ng-repeat="item in header.menuItems | filter:{active:true}" ui-sref-active="{'selected': item.state}">
+							<a itemprop="url" ui-sref="{{item.state}}" ng-click="header.toggleNavigation()">
+								<span itemprop="name">{{item.text | translate}}</span>
+							</a>
+						</li> 
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="title-bar angular-animate" ng-class="{'shown': true, 'no-animation': main.currentState.name == 'main.home'}" ng-hide="main.currentState.name == 'main.home'" ng-controller="BreadcrumbCtrl as breadcrumb">
+		<div ng-show="breadcrumb.hasImage" class="image angular-animate ng-hide ng-fade" ng-style="breadcrumb.backgroundImage && {'background-image':'url(' + breadcrumb.backgroundImage + ')'}"></div>
+		<div class="waves wave"></div>
+		<div class="waves wave2"></div>
+		<div class="waves wave3"></div>
+		<div class="waves wave4"></div>
+
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="title-col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" ng-class="{'no-title': breadcrumb.backgroundImage}">
+						<h1 class="headline" ng-show="!breadcrumb.backgroundImage">
+							{{breadcrumb.currentText | translate}}
+						</h1>
+					</div>
+					<div class="title-col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+						<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<li ng-repeat="item in breadcrumb.items" ng-show="!item.hide" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<a itemprop="item" ui-sref="{{item.state}}">
+									<span itemprop="name">{{item.text | translate}}</span>
+								</a>
+								<meta itemprop="position" content="{{$index + 1}}">
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-loading" ng-show="main.showSpinner">
+	  <div class="loader">
+		<svg class="circular" viewbox="25 25 50 50">
+		  <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+		</svg>
+	  </div>
+	</div>
+
+	<div class="content fade" ng-class="{'in in-active': !main.showContent}" ui-view></div>
+</main>
+
+<footer class="page-footer" ng-controller="FooterCtrl as footer" itemscope itemtype="http://schema.org/WPFooter">
+	<div class="container">
+		<div class="row">
+			<div class="footer-item contact">
+		        <div class="title">Contact</div>
+		        <div class="sub-title">Social media</div>
+			    <div class="content">
+					<div class="icons">
+						<a href="#">
+							<img src="assets/images/icons/twitter.svg">
+						</a>
+						<a href="#">
+							<img src="assets/images/icons/github.svg">
+						</a>
+						<a href="#">
+							<img src="assets/images/icons/linkedin.svg">
+						</a>
+					</div>
+			    </div>
+			    <div class="copyright">
+				    <img class="logo" src="./assets/images/logos/logo-hexagon.svg">
+				    <div class="text">
+				    	&copy; <span itemprop="copyrightYear">{{footer.currentDate | date:'yyyy'}}</span> &mdash; <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{'global.name' | translate}}</span></span>
+				    </div>
+			    </div>
+			</div>
+			<div class="footer-item">
+				<div class="title">{{'footer.latest_posts' | translate}}</div>
+				<div class="content">
+				    <ul class="recent-posts">
+				        <li ng-repeat="post in footer.recentPosts | limitTo:3">
+				            <a ui-sref="main.blog.post({category: post.Category.slug, title: post.slug})">
+				                <span class="title">{{post.title}}</span>
+				                <span class="date">
+									<i class="mdi mdi-clock"></i> 
+									<time datetime="{{post.publishedAt}}" time-ago></time>
+								</span>
+				            </a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+			<div class="footer-item xs-hide">
+		        <div class="title">{{'footer.popular_tags' | translate}}</div>
+		        <div class="content">
+		            <ul class="chip-list light">
+		                <li ng-repeat="tag in footer.topTags">
+		                    <a ui-sref="main.blog.search({filter: 'tag', search: '{{tag.slug}}'})">{{tag.name}}</a>
+		                </li>
+		            </ul>
+		        </div>
+			</div>
+		</div>
+	</div>
+	<!--
+	<div class="footer">
+			<div class="row">
+				<div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				    <div class="footer-item">
+				        <div class="title">Contact</div>
+				        <div class="sub-title">Social media</div>
+					    <div class="content">
+							<div class="icons">
+								<a href="#">
+									<img src="assets/images/icons/twitter.svg">
+								</a>
+								<a href="#">
+									<img src="assets/images/icons/github.svg">
+								</a>
+								<a href="#">
+									<img src="assets/images/icons/linkedin.svg">
+								</a>
+							</div>
+					    </div>
+					    <div class="content">
+						    <div class="copyright">
+							    <img class="logo" src="./assets/images/logos/logo-hexagon.svg">
+							    <div class="text">
+							    	&copy; <span itemprop="copyrightYear">{{footer.currentDate | date:'yyyy'}}</span> &mdash; <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{'global.name' | translate}}</span></span>
+							    </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xxs-12 last col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				    <div class="footer-item">
+				        <div class="title">{{'footer.latest_posts' | translate}}</div>
+				        <div class="content">
+				            <ul class="recent-posts">
+				                <li ng-repeat="post in footer.recentPosts | limitTo:3">
+				                    <a ui-sref="main.blog.post({category: post.Category.slug, title: post.slug})">
+				                        <span class="title">{{post.title}}</span>
+				                        <span class="date">
+											<i class="mdi mdi-clock"></i> 
+											<time datetime="{{post.publishedAt}}" time-ago></time>
+										</span>
+				                    </a>
+				                </li>
+				            </ul>
+				        </div>
+				    </div>
+				</div>
+				<div class="xs-hide col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				    <div class="footer-item">
+				        <div class="title">{{'footer.popular_tags' | translate}}</div>
+				        <div class="content">
+				            <ul class="chip-list light">
+				                <li ng-repeat="tag in footer.topTags">
+				                    <a ui-sref="main.blog.search({filter: 'tag', search: '{{tag.slug}}'})">{{tag.name}}</a>
+				                </li>
+				            </ul>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+	<!--
+	<div class="copyright">
+		<div class="container">
+			<div class="icons">
+				<a href="#">
+					<img src="assets/images/icons/twitter.svg">
+				</a>
+				<a href="#">
+					<img src="assets/images/icons/github.svg">
+				</a>
+				<a href="#">
+					<img src="assets/images/icons/linkedin.svg">
+				</a>
+			</div>
+			<span class="copyright-text">&copy; <span itemprop="copyrightYear">{{footer.currentDate | date:'yyyy'}}</span> &mdash; <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{'global.name' | translate}}</span></span>
+		</div>
+	</div>-->
+</footer>

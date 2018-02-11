@@ -1,0 +1,154 @@
+.page-footer {
+    background: linear-gradient(to bottom,#393c40,#26292c);
+    padding: 42px 0px;
+
+    >.container>.row {
+    	display: flex;
+    }
+
+	>.footer {
+		padding: 52px 0px;
+		width: 100%;
+		height: auto;
+	}
+
+
+	.copyright {
+	    display: flex;
+	    align-items: center;
+	    margin-top: auto;
+
+		>.logo {
+			height: 52px;
+		    filter: brightness(500%);
+		}
+
+		>.text {
+			font-weight: 600;
+			font-size: 16px;
+			color: #fff;
+			margin-left: 16px;
+			font-family: 'Quicksand';
+		}
+	}
+
+	.icons {
+		overflow: hidden;
+
+		a {
+			float: left;
+			display: block;
+			margin-right: 12px;
+
+			img {
+				height: 32px;
+			}
+		}
+	}
+	
+
+	/*>.copyright {
+		width: 100%;
+		border-top: 1px solid rgba(0, 0, 0, 0.12);
+		color: rgba(255,255,255,.8);
+		background: #2d3033;
+		font-weight: 500;
+		font-size: 16px;
+
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+    	.icons {
+    		a {
+    			float: left;
+    			display: block;
+    			margin-right: 12px;
+
+    			img {
+    				height: 26px;
+    			}
+    		}
+    	}
+
+		.copyright-text {
+			display: block;
+			padding: 24px 0px;
+			margin-left: auto;
+		}
+	}*/
+
+	@media (max-width: 768px) {
+		.xs-hide {
+			display: none;
+		}
+
+		>.footer {
+			padding: 32px 0;
+		}
+	}
+
+	@media (max-width: 580px) {
+	    padding: 24px 8px;
+
+	    >.container>.row {
+	    	flex-direction: column;
+	    }
+
+		.footer-item {
+			flex: none;
+			min-height: 220px;
+
+			&.contact {
+				order: 2;
+				margin-top: 24px;
+			}
+		}
+
+		.footer-item > .title {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+/*
+// Light version
+.page-footer {
+    box-shadow: 5px 8px 8px 10px rgba(0,0,0,.1);
+    background: #FFF;
+
+	>.footer {
+		padding: 32px 0px;
+		width: 100%;
+		height: auto;
+
+		@media (max-width: $screen-xs) {
+	    	.footer-item {
+	        	margin-bottom: 25px;
+	    	}
+	    }
+	}
+
+	>.copyright {
+		width: 100%;
+    	border-top: 1px solid rgba(0,0,0,.145);
+
+    	.icons {
+    		a {
+    			float: left;
+    			display: block;
+
+    			img {
+    				height: 26px;
+    			}
+    		}
+    	}
+
+		.copyright-text {
+			display: block;
+			padding: 24px 0px;
+			float: right;
+		}
+	}
+}*/

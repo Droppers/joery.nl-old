@@ -1,0 +1,84 @@
+.footer-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    >.title {
+        color: #fff;
+        font-size: 22px;
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-family: 'Quicksand';
+    }
+
+    >.sub-title {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 14px;
+        font-weight: 400;
+        font-family: 'Quicksand';
+    }
+
+    >.content {
+        display: block;
+    }
+
+    >.content > .chip-list {
+        margin: -4px;
+    }
+
+    >.content > .link-list {
+        margin: 0;
+        
+        >li {
+            margin: 0px 0px;
+        }
+
+        >li > a {
+            font-size: 15px;
+        }
+    }
+
+    >.content > .recent-posts {
+        margin-left: -8px;
+
+        >li {
+            position: relative;
+
+            >a {
+                transition: .3s;
+                padding: 13px 12px;
+                overflow: hidden;
+                display: inline-block;
+                width: 100%;
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgba(255, 255, 255, 0.085);
+                    border-radius: 4px;
+                }
+
+                >.title {
+                    display: block;
+                    margin-bottom: 3px;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 100%;
+                    font-size: 15px;
+                }
+
+                >.date {
+                    display: block;
+                    color: rgba(255, 255, 255, 0.65);
+                    font-size: 14px;
+                }
+
+                &:hover > .title {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: $background;
+    color: rgb(73, 82, 92);
+    font-family: $font-family;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.material-icons {
+    line-height: inherit;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+    float: right;
+}
+
+// Awesome CSS flex-box to put the footer at the bottom :)!
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+	>main {
+		flex: 1;
+	}
+}
+
+main > .content {
+    margin-bottom: 24px;
+    min-height: 400px;
+}
+
+@media (max-width: 992px) {
+	main > .content {
+		margin-bottom: 0px;
+	}
+}
+
+main > .content {
+    margin-top: -128px;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(-32px);
+}
+
+.fade.in {
+    transition: opacity 500ms, transform 200ms;
+}
+
+.fade.in-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+// ngAnimate animations
+.ng-fade {
+    &.ng-hide {
+        opacity: 0;
+    }
+
+    &.ng-hide-remove,
+    &.ng-hide-add {
+        display: block !important;
+    }
+
+    &.ng-hide-remove {
+        transition: all linear 1000ms;
+    }
+
+    &.ng-hide-add {
+        transition: all linear 500ms;
+    }
+}

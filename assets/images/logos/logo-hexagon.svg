@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 309.9 309.9"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="logo-hexagon.svg"
+   inkscape:version="0.92.1 r15371"
+   inkscape:export-filename="D:\Users\Joery\Nextcloud\Sync\Documents\Projects\joery.me-angular\public\images\logos\favicon-new.png"
+   inkscape:export-xdpi="39.651501"
+   inkscape:export-ydpi="39.651501">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4487">
+      <stop
+         style="stop-color:#3f51b5;stop-opacity:1;"
+         offset="0"
+         id="stop4483" />
+      <stop
+         style="stop-color:#873fb5;stop-opacity:1"
+         offset="1"
+         id="stop4485" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4487"
+       id="linearGradient4489"
+       x1="3.7429459"
+       y1="0.81450552"
+       x2="308.0141"
+       y2="307.22842"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="1.523072"
+     inkscape:cx="474.74093"
+     inkscape:cy="14.554366"
+     inkscape:window-x="3832"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <style
+     type="text/css"
+     id="style2">.white{fill:#FFFFFF;}</style>
+  <path
+     class="white"
+     d="M299.5 137l-56.7-98.3c-6.4-11.1-18.3-18-31.1-18H98.2c-12.8 0-24.7 6.8-31.1 18L10.4 137c-6.4 11.1-6.4 24.8 0 35.9l56.7 98.3c6.4 11.1 18.3 18 31.1 18h113.5c12.8 0 24.7-6.8 31.1-18l56.7-98.3C305.9 161.8 305.9 148.1 299.5 137zM190.4 61.9c7.8 0 14.1 6.3 14.1 14.1 0 7.8-6.3 14.1-14.1 14.1s-14.1-6.3-14.1-14.1C176.3 68.2 182.6 61.9 190.4 61.9zM204.4 233.9c0 0.1 0 0.1 0 0.2 0 0.3 0 0.5 0 0.8 0 0.2 0 0.4 0 0.6 0 0.2-0.1 0.5-0.1 0.7 0 0.2-0.1 0.5-0.1 0.7 0 0.2-0.1 0.3-0.1 0.5 -0.1 0.3-0.1 0.6-0.2 0.9 0 0.1-0.1 0.2-0.1 0.4 -0.1 0.3-0.2 0.6-0.4 1 0 0.1-0.1 0.2-0.1 0.3 -0.2 0.3-0.3 0.7-0.5 1 0 0 0 0.1 0 0.1 0 0.1-0.1 0.1-0.1 0.2 -0.2 0.3-0.4 0.6-0.5 0.8 -0.1 0.1-0.2 0.3-0.3 0.4 -0.2 0.2-0.3 0.4-0.5 0.7 -0.1 0.2-0.3 0.3-0.4 0.5 -0.2 0.2-0.3 0.4-0.5 0.5 -0.2 0.2-0.3 0.3-0.5 0.4 -0.2 0.2-0.4 0.3-0.5 0.4 -0.2 0.1-0.3 0.3-0.5 0.4 -0.2 0.1-0.4 0.3-0.6 0.4 -0.2 0.1-0.3 0.2-0.5 0.3 -0.2 0.1-0.5 0.3-0.7 0.4 -0.1 0.1-0.3 0.1-0.4 0.2 -0.3 0.1-0.5 0.2-0.8 0.4 -0.1 0.1-0.3 0.1-0.4 0.1 -0.3 0.1-0.6 0.2-0.9 0.3 -0.1 0-0.3 0.1-0.4 0.1 -0.3 0.1-0.6 0.1-0.9 0.2 -0.2 0-0.4 0.1-0.6 0.1 -0.3 0-0.5 0.1-0.8 0.1 -0.2 0-0.5 0-0.7 0 -0.2 0-0.3 0-0.5 0 -0.1 0-0.1 0-0.2 0 -0.3 0-0.5 0-0.8 0 -0.2 0-0.4 0-0.6 0 -0.2 0-0.5-0.1-0.7-0.1 -0.2 0-0.5-0.1-0.7-0.1 -0.2 0-0.4-0.1-0.6-0.1 -0.3-0.1-0.5-0.1-0.8-0.2 -0.2 0-0.3-0.1-0.5-0.2 -0.3-0.1-0.6-0.2-0.9-0.3 -0.1-0.1-0.3-0.1-0.4-0.2 -0.3-0.1-0.6-0.3-0.9-0.4 0 0-0.1 0-0.1-0.1l-84-48.5c-4.9-2.8-7.5-8.2-7-13.5 0.2-3.3 1.6-6.5 4.1-9l19.3-19.3c5.5-5.5 14.4-5.5 19.9 0s5.5 14.4 0 19.9l-6.5 6.5 47.3 27.3v-90.8c0-7.8 6.3-14.1 14.1-14.1 7.8 0 14.1 6.3 14.1 14.1V233.9z"
+     id="path4"
+     style="fill:url(#linearGradient4489);fill-opacity:1" />
+</svg>

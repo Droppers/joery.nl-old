@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+			<div class="card project-view">
+				<div class="banner-heading medium shade">
+					<div class="banner" ng-style="{'background-image':'url(' + vm.project.bannerImage + ')'}"></div>
+					
+					<a class="category" ui-sref="main.blog.search({filter: 'category', search: vm.project.Category.slug})">
+						{{vm.project.ProjectCategory.name | translate}}
+					</a>
+					
+					<div class="info">
+						<div class="title">
+							{{vm.project.title}}
+						</div>
+					</div>
+				</div>
+				<div class="content extra-padding">
+					<div class="body" marked="vm.project.description">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div ng-include="'components/portfolio/portfolio-aside.view.html'"></div>
+	</div>
+</div>

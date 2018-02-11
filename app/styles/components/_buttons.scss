@@ -1,0 +1,52 @@
+.button {
+    position: relative;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 14px;
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+    background: #fff;
+    padding: 14px 24px;
+    display: inline-block;
+    color: rgba(0,0,0,.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+
+    &.primary {
+        background: #3F51B5;
+        color: #FFF;
+        font-weight: 500;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+        transform: translateY(-1px);
+    }
+
+    &.raised {
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+
+        &:hover {
+            box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        border-radius: 4px;
+        background: transparent;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    &:hover:before {
+        background: rgba(255,255,255,.1);
+    }
+}

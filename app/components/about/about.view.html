@@ -1,0 +1,172 @@
+<!-- MAIN CONTENT -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+			<div class="card">
+				<div class="title">
+					{{'about.story.title' | translate}}
+				</div>
+				<div class="content">
+					<div marked="'about.story.content' | translate"></div>
+					<br><br>
+					<a href="todo.pdf" target="_blank" class="button raised primary">{{'about.download_resume' | translate}}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="title">
+					{{'about.skills' | translate}}
+				</div>
+				<div class="content small-padding">
+					<ul class="chip-list">
+						<li ng-repeat="skill in vm.skills">
+							<div class="inner">
+								<a>{{skill}}</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+			<div class="card">
+				<div class="title">
+					{{'about.education' | translate}}
+				</div>
+				<div class="content">
+					<ul class="timeline-new">
+						<li ng-repeat="event in vm.experiences.education" ng-class="{'has-childs': event.Childs.length > 0}">
+							<div class="item">
+								<div class="date">
+									<time datetime="{{event.beganAt}}" month-year></time>
+								</div>
+								<div class="content">
+									<div class="heading">
+										<div class="title">{{event.title}}</div>
+										<div class="place">Baudartius College</div>
+										<div class="location"><i class="mdi mdi-map-marker"></i> Zutphen</div>
+									</div>
+									<div class="description">
+										{{event.description}}
+									</div>
+								</div>
+							</div>
+
+							<ul class="timeline-new child">
+								<li ng-repeat="child in event.Childs">
+									<div class="item">
+										<div class="date">
+											<time datetime="{{child.beganAt}}" month-year></time>
+										</div>
+										<div class="content {{child.Type.icon}}">
+											<img class="child-curve" ng-show="$first" src="assets/images/round.png">
+											<div class="child-line"></div>
+											<div class="heading">
+												<div class="title">{{child.title}}</div>
+												<div class="place">Baudartius College</div>
+												<div class="location"><i class="mdi mdi-map-marker"></i> Zutphen</div>
+											</div>
+											<div class="description">
+												{{child.description}}
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="title">
+					{{'about.work_experience' | translate}}
+				</div>
+				<div class="content">
+					<ul class="timeline-new">
+						<li ng-repeat="event in vm.experiences.work">
+							<div class="item">
+								<div class="date">
+									<time datetime="{{event.beganAt}}" month-year></time>
+								</div>
+								<div class="content">
+									<div class="heading">
+										<div class="title">{{event.title}}</div>
+										<div class="place">Baudartius College</div>
+										<div class="location"><i class="mdi mdi-map-marker"></i> Zutphen</div>
+									</div>
+									<div class="description">
+										{{event.description}}
+									</div>
+								</div>
+							</div>
+
+							<!-- TODO: FIX CHILD EVENTS, I BROKE THEM -->
+							<!--
+							<ul class="timeline-new child">
+								<li ng-repeat="child in event.Childs">
+									<div class="item">
+										<div class="date">
+											<time datetime="{{event.startedAt}}" month-year></time>
+										</div>
+										<div class="content {{child.Type.icon}}">
+											<div class="heading">
+												<div class="title">{{child.title}}</div>
+												<div class="place">Baudartius College</div>
+												<div class="location"><i class="mdi mdi-map-marker"></i> Zutphen</div>
+											</div>
+											<div class="content">
+												{{child.description}}
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							-->
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--
+			<ul class="timeline">
+				<li ng-repeat="event in vm.events">
+					<div class="item">
+						<div class="date">
+							<time datetime="{{event.startedAt}}" month-year></time>
+						</div>
+						<div class="content {{event.Type.icon}}">
+							<div class="card speech">
+								<div class="title">
+									{{event.title}}
+								</div>
+								<div class="content">
+									{{event.description}}
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<ul class="timeline child">
+						<li ng-repeat="child in event.Childs">
+							<div class="item">
+								<div class="date">
+									<time datetime="{{event.startedAt}}" month-year></time>
+								</div>
+								<div class="content {{child.Type.icon}}">
+									<div class="card speech">
+										<div class="title">
+											{{child.title}}
+										</div>
+										<div class="content">
+											{{child.description}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			-->
+		</div>
+	</div>
+</div>
