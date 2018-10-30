@@ -95,7 +95,7 @@
 				<div class="content">
 				    <ul class="recent-posts">
 				        <li ng-repeat="post in footer.recentPosts | limitTo:3">
-				            <a ui-sref="main.blog.post({category: post.Category.slug, title: post.slug})">
+				            <a ui-sref="main.blog.post({category: post.PostCategory.slug, title: post.slug})">
 				                <span class="title">{{post.title}}</span>
 				                <span class="date">
 									<i class="mdi mdi-clock"></i> 

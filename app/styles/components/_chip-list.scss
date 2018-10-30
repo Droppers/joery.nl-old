@@ -27,20 +27,25 @@
 		    cursor: pointer;
 		}
 
-		/*&:hover { background: rgba(0,0,0,.16); }*/
-		&:hover a {
-			color: #FFF;
-			font-weight: 500;
-		}
-
 		.inner {
 			margin: 2px;
 			background: #FFF;
 			border-radius: 4px;
+		}
+		
+		&:not(.disabled) {
+			&:hover a {
+				color: #FFF;
+				font-weight: 500;
+			}
 
-			&:hover {
+			.inner:hover {
 				background: transparent;
 			}
+		}
+		
+		&.disabled a {
+				cursor: default;
 		}
 	}
 }
