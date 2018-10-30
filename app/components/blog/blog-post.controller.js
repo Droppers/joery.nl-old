@@ -16,8 +16,6 @@ angular.module('blogApp').controller('BlogPostCtrl', ["$rootScope", "$stateParam
 				{ text: vm.post.title }
 			]);
 
-			console.log(vm.post);
-
 			$rootScope.$broadcast('title-image', { url: vm.post.bannerImage });
 			
 			PageService.setFinished();

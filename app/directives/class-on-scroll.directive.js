@@ -9,7 +9,7 @@ angular.module('blogApp').directive("scrollClass", ["$window", function ($window
                     elem.addClass(className);
                 } else if (this.pageYOffset < 100 && hasClass) {
                     hasClass = false;
-                    console.log('test');
+
                     elem.removeClass(className);
                 }
         });

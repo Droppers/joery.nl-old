@@ -10,7 +10,7 @@ angular.module('blogApp').directive('errorCard', function () {
             return {
                 pre: function(scope, element, attributes, controller, transcludeFn){
                     scope.iconClass = 'alert-circle-outline';
-                    console.log(scope.icon);
+
                     if(scope.icon == 'error')
                         scope.iconClass = 'alert';
                 }
