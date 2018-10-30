@@ -1,10 +1,11 @@
 .card {
     width: 100%;
-    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-    border-radius:4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.1);
+    border-radius: 6px;
     transition: box-shadow .3s cubic-bezier(.25,.8,.25,1);
 	margin-bottom: 24px;
     background: #FFF;
+    overflow: auto;
 
     >.error {
         display: table-row;
@@ -34,7 +35,6 @@
         padding: 0 24px;
         font-size: 20px;
         padding-top: 24px;
-        padding-bottom: 8px;
         color: #3f51b5;
         position: relative;
         font-family: 'Quicksand';
@@ -65,8 +65,9 @@
         height: 220px;
         overflow: hidden;
         position: relative;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+        margin: 5px;
+        margin-bottom: 0;
+        border-radius: 4px;
 
         &.small { height: 170px; }
         &.medium { height: 190px; }

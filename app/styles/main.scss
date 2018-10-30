@@ -23,12 +23,10 @@
 @import "components/buttons";
 @import "components/marked";
 @import "components/browser";
+@import "components/spinner";
 
 // Pages
 @import "pages/home";
 @import "pages/about";
 @import "pages/blog";
 @import "pages/portfolio";
-
-// Move this CSS to SCSS
-@import "old";

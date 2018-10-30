@@ -21,7 +21,6 @@ body {
     float: right;
 }
 
-// Awesome CSS flex-box to put the footer at the bottom :)!
 .wrapper {
     width: 100%;
     display: flex;
@@ -30,36 +29,38 @@ body {
 
 	>main {
 		flex: 1;
+
+		>.content {
+			margin-bottom: 24px;
+			margin-top: -128px;
+			min-height: 400px;
+			
+			&.fade {
+				opacity: 0;
+				transform: translateY(-32px);
+				
+				&.in {
+					transition: opacity 500ms, transform 200ms;
+				}
+				
+				&.in-active {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+		}
+		
+		>.content-loading {
+			width: 100%;
+			padding: 5%;
+		}
+		
+		@media (max-width: 992px) {
+			>.content {
+				margin-bottom: 0px;
+			}
+		}
 	}
-}
-
-main > .content {
-    margin-bottom: 24px;
-    min-height: 400px;
-}
-
-@media (max-width: 992px) {
-	main > .content {
-		margin-bottom: 0px;
-	}
-}
-
-main > .content {
-    margin-top: -128px;
-}
-
-.fade {
-    opacity: 0;
-    transform: translateY(-32px);
-}
-
-.fade.in {
-    transition: opacity 500ms, transform 200ms;
-}
-
-.fade.in-active {
-    opacity: 1;
-    transform: translateY(0px);
 }
 
 // ngAnimate animations
