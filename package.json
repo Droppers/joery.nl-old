@@ -8,16 +8,19 @@
   },
   "private": true,
   "dependencies": {
-    "prerender": "^5.2.2"
+    "method-override": "^3.0.0",
+    "prerender": "^5.4.4"
   },
   "devDependencies": {
     "del": "^3.0.0",
     "event-stream": "^3.3.4",
     "express": "^4.16.2",
-    "gulp": "^3.8.10",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.4.2",
-    "gulp-htmlhint": "^2.1.0",
+    "gulp-hash": "^4.2.2",
+    "gulp-htmlhint": "^2.2.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-inject": "^4.3.0",
     "gulp-jshint": "^2.1.0",
@@ -26,13 +29,14 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-ng-html2js": "^0.2.2",
     "gulp-nodemon": "^2.2.1",
-    "gulp-order": "^1.1.1",
+    "gulp-order": "^1.2.0",
     "gulp-print": "^5.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.1",
+    "jshint": "^2.9.6",
     "jshint-stylish": "^2.2.1",
     "main-bower-files": "^2.4.1"
   }

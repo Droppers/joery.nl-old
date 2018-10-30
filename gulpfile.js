@@ -21,6 +21,12 @@ var paths = {
     scriptsDevServer: 'dev/**/*.js'
 };
 
+var injectOpts = {
+	algorithm: 'sha1',
+	hashLength: 16,
+	template: '<%= name %><%= ext %>?hash=<%= hash %>'
+};
+
 // == PIPE SEGMENTS ========
 
 var pipes = {};
@@ -105,6 +111,10 @@ pipes.scriptedPartials = function() {
 pipes.builtStylesDev = function() {
     return gulp.src(paths.styles)
         .pipe(plugins.sass())
+        .pipe(plugins.autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest(paths.distDev));
 };
 
@@ -112,7 +122,11 @@ pipes.builtStylesProd = function() {
     return gulp.src(paths.styles)
         .pipe(plugins.sourcemaps.init())
             .pipe(plugins.sass())
-            .pipe(plugins.cleanCss())
+            .pipe(plugins.cleanCss()
+			.pipe(plugins.autoprefixer({
+				browsers: ['last 2 versions'],
+				cascade: false
+			})))
         .pipe(plugins.sourcemaps.write())
         .pipe(pipes.minifiedFileName())
         .pipe(gulp.dest(paths.distProd));
@@ -154,9 +168,9 @@ pipes.builtIndexDev = function() {
 
 pipes.builtIndexProd = function() {
 
-    var vendorScripts = pipes.builtVendorScriptsProd();
-    var appScripts = pipes.builtAppScriptsProd();
-    var appStyles = pipes.builtStylesProd();
+    var vendorScripts = pipes.builtVendorScriptsProd().pipe(plugins.hash(injectOpts));
+    var appScripts = pipes.builtAppScriptsProd().pipe(plugins.hash(injectOpts));
+    var appStyles = pipes.builtStylesProd().pipe(plugins.hash(injectOpts));
 
     return pipes.validatedIndex()
         .pipe(gulp.dest(paths.distProd)) // write first to get relative path for inject
