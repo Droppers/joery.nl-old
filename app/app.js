@@ -11,8 +11,16 @@ app.config(["$animateProvider", "$stateProvider", "$translateProvider", "$urlRou
 	
 	$translateProvider.useLocalStorage();
 	$translateProvider
-		.preferredLanguage('nl')
-		.fallbackLanguage('en');
+		.useSanitizeValueStrategy('escape')
+		.registerAvailableLanguageKeys(
+			['nl', 'en'],
+			{
+				'nl*': 'nl',
+				'*': 'en'
+			}
+		)
+		.fallbackLanguage('en')
+		.determinePreferredLanguage();
 	
 	$stateProvider
 	.state('public', {
