@@ -47,25 +47,25 @@
 				<div class="flex col-xs-12 col-sm-12 col-md-5" ng-class="{'col-md-push-7': $even}">
 					<div class="project-banner">
 						<div class="browser">
-						  <div class="title">
-						    <div class="url" ng-if="project.ProjectCategory.slug != 'website'">
-						      <span class="protocol">https://</span>
-						      <span class="domain">joery.nl</span>
-						      <span class="path">/</span>
-						    </div>
-						    <div class="name" ng-if="project.ProjectCategory.slug == 'website'">
-						    	<i class="mdi mdi-application"></i>
-						    	Lightshot
-						    </div>
-						    <div class="controls">
-						      <div class="close"></div>
-						      <div class="minimize"></div>
-						      <div class="restore"></div>
-						    </div>
-						  </div>
-						  <div class="content">
-						      <div class="image" ng-style="{'background-image':'url(' + project.bannerImage + ')'}"></div>
-						  </div>
+							<div class="title">
+								<div class="url" ng-if="project.ProjectCategory.slug != 'website'">
+									<img class="lock" src="assets/images/icons/ssl-lock.svg">
+									<span class="protocol">https://</span>
+									<span class="host">joery.nl</span>
+								</div>
+								<div class="name" ng-if="project.ProjectCategory.slug == 'website'">
+									<i class="mdi mdi-application"></i>
+									Lightshot
+								</div>
+								<div class="controls">
+									<div class="close"></div>
+									<div class="minimize"></div>
+									<div class="restore"></div>
+								</div>
+							</div>
+							<div class="content">
+								<div class="image" ng-style="{'background-image':'url(' + project.bannerImage + ')'}"></div>
+							</div>
 						</div>
 					</div>
 				</div>
