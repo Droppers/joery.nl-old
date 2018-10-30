@@ -1,5 +1,5 @@
 .page-footer {
-    background: linear-gradient(to bottom,#393c40,#26292c);
+    background: #FFF;
     padding: 42px 0px;
 
     >.container>.row {
@@ -20,13 +20,12 @@
 
 		>.logo {
 			height: 52px;
-		    filter: brightness(500%);
 		}
 
 		>.text {
 			font-weight: 600;
 			font-size: 16px;
-			color: #fff;
+			color: #000;
 			margin-left: 16px;
 			font-family: 'Quicksand';
 		}

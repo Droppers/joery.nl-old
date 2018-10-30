@@ -109,9 +109,11 @@
 			<div class="footer-item xs-hide">
 		        <div class="title">{{'footer.popular_tags' | translate}}</div>
 		        <div class="content">
-		            <ul class="chip-list light">
+		            <ul class="chip-list">
 		                <li ng-repeat="tag in footer.topTags">
-		                    <a ui-sref="main.blog.search({filter: 'tag', search: '{{tag.slug}}'})">{{tag.name}}</a>
+		                	<div class="inner">
+			                    <a ui-sref="main.blog.search({filter: 'tag', search: '{{tag.slug}}'})">{{tag.name}}</a>
+			                </div>
 		                </li>
 		            </ul>
 		        </div>
