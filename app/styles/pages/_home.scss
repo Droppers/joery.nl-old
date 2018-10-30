@@ -106,7 +106,7 @@ section.heading {
         font-size: 21px;
         margin-top: 22px;
         font-weight: 400;
-        color: rgb(42, 47, 98);
+        color: #3d3d3d;
     }
 }
 
@@ -204,7 +204,7 @@ section.heading {
             display: block;
         }
 
-        .content {
+        .portfolio-content {
             position: static;
             transform: none !important;
             top: 0 !important;
@@ -225,7 +225,7 @@ section.heading {
             overflow: hidden;
             padding: 12px;
 
-            .content {
+            .portfolio-content {
                 >.footer {
                     margin-top: 24px;
                     flex-direction: column;
@@ -270,7 +270,7 @@ section.heading {
     padding-bottom: 180px;
 
     .stripe {
-        background: linear-gradient(to bottom, #ffffff0a, transparent);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), transparent);
         position: absolute;
         left: 0px;
         width: 150px;
@@ -342,6 +342,11 @@ section.heading {
         }
     }
 
+    @keyframes mover {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-24px); }
+    }
+
     .waves {
         position: absolute;
         top: 100%;
@@ -349,44 +354,45 @@ section.heading {
         right: 0px;
         background: url(../../assets/images/wave.svg);
         background-position: center;
+        animation: mover 2s infinite  alternate;
 
         &.wave {
             height: 250px;
-            transform: translateY(-55px);
-            animation: wave 20s linear infinite;
+            top: calc(100% - 55px);
+            animation: wave 13s linear infinite, mover 5s infinite random(10)+s alternate;
         }
 
         &.wave2 {
             height: 280px;
-            transform: translateY(-105px);
+            top: calc(100% - 105px);
             background-size: 704px 220px;
             opacity: 0.5;
             left: -80vw;
             left: -20vw;
 
-            animation: wave2 13s linear infinite;
+            animation: wave2 20s linear infinite, mover 5s infinite random(8)+s alternate;
         }
 
         &.wave3 {
             height: 220px;
-            transform: translateY(-142px);
+            top: calc(100% - 142px);
             background-size: 704px 220px;
             opacity: 0.33;
             left: 0vw;
             left: -100vw;
 
-            animation: wave3 28s linear infinite;
+            animation: wave3 16s linear infinite, mover 5s infinite random(6)+s alternate;
         }
         
         &.wave4 {
             height: 240px;
-            transform: translateY(-180px);
+            top: calc(100% - 180px);
             background-size: 768px 240px;
             opacity: 0.1;
             left: 0vw;
             left: -60vw;
 
-            animation: wave4 22s linear infinite;
+            animation: wave4 14s linear infinite, mover 5s infinite random(6)+s alternate;
         }  
     }
 
