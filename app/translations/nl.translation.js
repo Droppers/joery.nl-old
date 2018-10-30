@@ -63,7 +63,7 @@ angular.module('blogApp').config(['$translateProvider', function($translateProvi
 			"search": "Zoek term"
 		},
 
-		"category": {
+		"categories": {
 			"post": {
 				"test": "Test categorie",
 				"stage": "Stage berichten"

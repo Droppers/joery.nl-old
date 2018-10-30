@@ -63,7 +63,7 @@ angular.module('blogApp').config(['$translateProvider', function($translateProvi
 			"search": "Search term"
 		},
 
-		"category": {
+		"categories": {
 			"post": {
 				"test": "Test category",
 				"stage": "Stage posts"
