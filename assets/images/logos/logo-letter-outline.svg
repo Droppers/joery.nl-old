@@ -1,0 +1,26 @@
+<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="logo-letter-outline.svg" version="1.1" viewBox="0 0 192.62349 315.50001" id="svg2" inkscape:version="0.92.1 r15371" width="192.62349" height="315.5" style="">
+  <metadata id="metadata12">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <defs id="defs10">
+    <marker inkscape:stockid="Arrow1Lstart" orient="auto" refY="0" refX="0" id="marker4854" style="overflow:visible" inkscape:isstock="true">
+      <path id="path4852" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(0.8,0,0,0.8,10,0)" inkscape:connector-curvature="0" class="aCmPWSUT_0"></path>
+    </marker>
+    <marker inkscape:stockid="Arrow1Lstart" orient="auto" refY="0" refX="0" id="Arrow1Lstart" style="overflow:visible" inkscape:isstock="true">
+      <path id="path4484" d="M 0,0 5,-5 -12.5,0 5,5 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1" transform="matrix(0.8,0,0,0.8,10,0)" inkscape:connector-curvature="0" class="aCmPWSUT_1"></path>
+    </marker>
+  </defs>
+  <sodipodi:namedview inkscape:current-layer="svg2" inkscape:window-maximized="1" inkscape:window-y="-8" inkscape:window-x="3832" inkscape:cy="164.87083" inkscape:cx="-72.465728" inkscape:zoom="2.1539491" showgrid="false" id="namedview8" inkscape:window-height="1017" inkscape:window-width="1920" inkscape:pageshadow="2" inkscape:pageopacity="0" guidetolerance="10" gridtolerance="10" objecttolerance="10" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"></sodipodi:namedview>
+  <style id="style4">
+    .white { fill:#FFFFFF; }
+  </style>
+  <path style="fill: none; fill-opacity: 1; stroke: rgb(255, 255, 255); stroke-width: 5.5; stroke-miterlimit: 4; stroke-opacity: 1; paint-order: stroke markers;" d="m 166.27381,74.050781 c -12.9,0 -23.29883,10.398438 -23.29883,23.398438 V 248.70898 L 63.97693,203.11523 74.87342,192.15039 c 9,-9 9,-24 0,-33 -9.2,-9 -23.99922,-9 -33.19922,0 L 9.6741997,191.34961 c -2.401104,2.4011 -4.153511,5.23241 -5.273438,8.25977 -4.259335,10.70739 -0.05556,23.1068 9.9726573,28.9414 l 140.000001,81 c 1.60609,0.91777 3.27707,1.61848 4.97851,2.125 0.0357,0.0113 0.0717,0.0221 0.10743,0.0332 0.17099,0.05 0.34209,0.10053 0.51367,0.14649 2.03247,0.57873 4.17674,0.89453 6.40039,0.89453 l 0.10156,-0.0996 c 0.0256,0 0.0506,-0.002 0.0762,-0.002 0.01,-2.2e-4 0.0196,2.3e-4 0.0293,0 0.0118,-5e-5 0.0234,-0.002 0.0352,-0.002 12.83519,-0.0757 23.25781,-10.44404 23.25781,-23.39648 V 97.449219 c 0,-12.9 -10.39844,-23.398438 -23.39844,-23.398438 z" id="path8" inkscape:connector-curvature="0" class="aCmPWSUT_2"></path>
+  <path id="circle12" class="white aCmPWSUT_3" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 5.5; stroke-miterlimit: 4; stroke-opacity: 1; paint-order: stroke markers;" d="M142.87422,26.15A23.4,23.4 0,1,1 189.67422000000002,26.15A23.4,23.4 0,1,1 142.87422,26.15"></path>
+<style data-made-with="vivus-instant">.aCmPWSUT_0{stroke-dasharray:51 53;stroke-dashoffset:52;animation:aCmPWSUT_draw 2500ms ease-in-out 0ms forwards;}.aCmPWSUT_1{stroke-dasharray:51 53;stroke-dashoffset:52;animation:aCmPWSUT_draw 2500ms ease-in-out 0ms forwards;}.aCmPWSUT_2{stroke-dasharray:897 899;stroke-dashoffset:898;animation:aCmPWSUT_draw 2500ms ease-in-out 0ms forwards;}.aCmPWSUT_3{stroke-dasharray:148 150;stroke-dashoffset:149;animation:aCmPWSUT_draw 2500ms ease-in-out 0ms forwards;}@keyframes aCmPWSUT_draw{100%{stroke-dashoffset:0;}}@keyframes aCmPWSUT_fade{0%{stroke-opacity:1;}94.02985074626866%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
