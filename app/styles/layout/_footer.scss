@@ -15,24 +15,24 @@
 
 	.copyright {
 	    display: flex;
-	    align-items: center;
-	    margin-top: auto;
+		flex-direction: column;
 
 		>.logo {
 			height: 52px;
+			width: 52px;
 		}
 
 		>.text {
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 16px;
 			color: #000;
-			margin-left: 16px;
-			font-family: 'Quicksand';
+			margin-top: 12px;
 		}
 	}
 
 	.icons {
 		overflow: hidden;
+		margin-top: 32px;
 
 		a {
 			float: left;
